@@ -1,0 +1,25 @@
+name: StarAC
+version: 1.0.0
+main: io.starac.StarAC
+api-version: 1.16
+description: AI-powered anticheat
+author: starac
+
+commands:
+  starac:
+    description: StarAC main command
+    usage: /starac <subcommand>
+    aliases: [sac]
+
+permissions:
+  starac.admin:
+    description: Access to admin commands (reload, status)
+    default: op
+
+  starac.alerts:
+    description: Receive anticheat alerts
+    default: op
+
+  starac.bypass:
+    description: Bypass anticheat checks
+    default: false

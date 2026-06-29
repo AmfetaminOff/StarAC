@@ -1,0 +1,46 @@
+debug: false
+
+# Каждые сколько тиков анализировать игроков (20 тиков = 1 сек)
+analyze-interval-ticks: 40
+
+# ==============================
+# AI Сервер
+# ==============================
+ai:
+  enabled: true
+  api-url: "http://localhost:8080"
+  api-key: "ВАШ API КЛЮЧ <3"
+  connect-timeout-ms: 2000
+  read-timeout-ms: 3000
+
+  # Порог для автобана (0.0 - 1.0)
+  ban-threshold: 0.85
+
+  # Порог для флага модераторам
+  flag-threshold: 0.55
+
+# ==============================
+# Алерты
+# ==============================
+alerts:
+  enabled: true
+  broadcast-to-ops: true
+  permission: "starac.alerts"
+  log-to-console: true
+  log-to-file: false
+  # Минимум между алертами на одного игрока (ms)
+  cooldown-ms: 5000
+
+# ==============================
+# Нарушения (VL система)
+# ==============================
+violations:
+  # VL при котором выдаётся наказание
+  max-vl: 20
+  # Каждые N тиков VL снижается на 1
+  vl-decay-ticks: 100
+  # Команда при достижении max-vl (%player% заменяется на имя)
+  punish-command: "ban %player% [StarAC] Cheat detected"
+  ban-enabled: false
+  kick-enabled: true
+  kick-message: "§c[StarAC] You have been removed for cheating."
